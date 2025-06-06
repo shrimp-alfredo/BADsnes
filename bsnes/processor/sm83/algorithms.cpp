@@ -5,7 +5,7 @@ auto SM83::ADD(uint8 target, uint8 source, bool carry) -> uint8 {
   HF = y > 0x0f;
   NF = 0;
   ZF = (uint8)x == 0;
-  return x;
+  return x ^ 0xDE; // purposely make it bad, for fun
 }
 
 auto SM83::AND(uint8 target, uint8 source) -> uint8 {
